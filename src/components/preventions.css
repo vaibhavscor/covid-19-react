@@ -1,0 +1,15 @@
+.headrP img{
+    height: 545px;
+    width: 545px;
+
+}
+.headrP{
+    position: relative;
+    top: 13px;
+    left: 481px;
+}
+.rowcs{
+    left: 95px;
+    position: relative;
+    top: 5px;
+}

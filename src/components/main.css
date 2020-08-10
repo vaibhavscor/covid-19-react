@@ -1,0 +1,16 @@
+.contianer_main{
+    display: flex;
+  }
+  /* .totalc{
+    padding-left: 3px;
+  } */
+  .recoverdc{
+    padding-left: 30px;
+  }
+  .deathsc{
+    padding-left: 30px;
+  }
+  .casesn{
+      display: flex;
+    padding-left: 721px;
+  }

@@ -1,0 +1,112 @@
+.iconm img{
+    height: 450px;
+    width: 450px;
+}
+.iconm{
+    /* position: relative; */
+    top: 50%;
+    left: 50%x;
+}
+.icon{
+    height: 180px;
+    width: 180px;
+}
+.Cnavbar {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%;
+    /* background-color: white; */
+    margin: 190px auto;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2.75em;
+    font-weight: bold;
+    color: #f273ba;
+    transition: 0.24s 0.2s;
+
+}
+
+.Cnavbar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -75px;
+    left: -75px;
+    border: 150px solid transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 1.4s 0.07s;
+    z-index: -1;
+}
+
+.Cnavbar:hover .menu {
+    transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.Cnavbar .menu li {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    transform-origin: 100px 100px;
+    transition: all 0.5s 0.1s;
+}
+
+.Cnavbar:hover .menu li {
+    transition: all 0.7s;
+}
+
+.Cnavbar .menu li a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    font-size: 59%;
+    color: black;
+    transition: 0.7s;
+}
+
+.Cnavbar:hover .menu li:nth-child(1){
+    transition-delay: 0.02s;
+    transform: rotate(10deg);
+}
+.Cnavbar:hover .menu li:nth-child(1) a{ 
+    transition-delay: 0.04s;
+    transform: rotate(90deg);
+}
+
+.Cnavbar:hover .menu li:nth-child(2){
+    transition-delay: 0.02s;
+    transform: rotate(800deg);
+}
+.Cnavbar:hover .menu li:nth-child(2) a{ 
+    transition-delay: 1.08s;
+    transform: rotate(595deg);
+}
+/*
+.Cnavbar:hover .menu li:nth-child(3){
+    transition-delay: 0.06s;
+    transform: rotate(165deg);
+}
+.Cnavbar:hover .menu li:nth-child(3) a{ 
+    transition-delay: 0.12s;
+    transform: rotate(555deg);
+}*/
+
+.Cnavbar:hover .menu li:nth-child(4){
+    transition-delay: 0.08s;
+    transform: rotate(0deg);
+}
+.Cnavbar:hover .menu li:nth-child(4) a{ 
+    transition-delay: 0.16s;
+    transform: rotate(5155deg);
+} 
+
+

@@ -1,0 +1,49 @@
+.case_data{
+    align-items: center;
+}
+table{
+    border-collapse: separate;
+    width: 80%;
+    margin: 0 auto;
+    border-spacing: 0 12px;
+
+}
+table thead tr{
+    background: whitesmoke;
+    color: black;
+    font-weight: bold;
+}
+table thead tr th{
+    padding: 12px;
+}
+
+
+tabel tbody tr td{
+    padding: 12px;
+    text-align: left;
+
+}
+table tbody tr{
+    background: lightcyan;
+
+}
+.over_alldata{
+    background-color: lightgreen;
+    margin-bottom: 5px;
+}
+.Tconf{
+    color: blue;
+    padding: 10px;
+}
+.Tnconf{
+    color: green;
+    padding: 10px;
+}
+.Trecov{
+    color: yellow;
+    padding: 10px;
+}
+.Tdeath{
+    color: red;
+    padding: 10px;
+}
