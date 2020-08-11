@@ -21,15 +21,15 @@ export default function News() {
             {loading ? (<div>
                 {news.map((cntry) => (
                     <div className="container-fluid">
-                        <div class="card mb-3 contr" style={{ width: "540px" }}>
+                        <div className="card mb-3 contr" style={{ width: "540px" }}>
 
-                            <div class="row no-gutters">
-                                {/* <div class="col-md-4">
-        <img src="{cntry.img}" class="card-img" alt="..." />
+                            <div className="row no-gutters">
+                                {/* <div className="col-md-4">
+        <img src="{cntry.img}" className="card-img" alt="..." />
     </div> */}
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{cntry.title}</h5>
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <h5 className="card-title">{cntry.title}</h5>
                                         <a className="btn btn-success" href={cntry.link} >
                                             Read more
       </a>
@@ -42,9 +42,9 @@ export default function News() {
                 ))
                 }
             </div >) : (
-                    <div class="d-flex justify-content-center">
-                        <div class="spinner-border" role="status">
-                            <span class="sr-only">Loading...</span>
+                    <div className="d-flex justify-content-center">
+                        <div className="spinner-border" role="status">
+                            <span className="sr-only">Loading...</span>
                         </div>
                     </div>
                 )}

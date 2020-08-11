@@ -6,7 +6,7 @@ export default function Preventions() {
     return (
         <div>
             <div className="headrP">
-                <img src={require("../assests/steps/s0.png")} />
+                <img src={require("../assests/steps/s0.png")} alt="img4" />
             </div>
             <div className="p menu">
 

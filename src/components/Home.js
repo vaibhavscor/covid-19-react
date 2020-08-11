@@ -7,7 +7,7 @@ export default function Home() {
         <div className="nosc">
             <div className="content home_content">
                 <div className="bimg col-6">
-                    <img src={require("../assests/bg1.png")} />
+                    <img src={require("../assests/bg1.png")} alt="img5" />
                 </div>
                 <div className="weather col-6">
                     <Weather />

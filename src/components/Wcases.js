@@ -3,14 +3,14 @@ import axios from 'axios';
 // import './case.css';
 
 export default function Wcases() {
-    const [cntr, setcntr] = useState([])
+    // const [cntr, setcntr] = useState([])
     const [totl, settotl] = useState([])
 
     useEffect(() => {
         async function getdata() {
             const res = await axios.get(`https://api.covid19api.com/summary`);
             console.log(res.data.Global);
-            setcntr(res.data.Countries)
+            // setcntr(res.data.Countries)
             settotl(res.data.Global)
         }
 

@@ -6,7 +6,7 @@ export default function Symptomps() {
     return (
         <div className="container">
             <div className="headrC">
-                <img src={require("../assests/symp/s0.png")} />
+                <img src={require("../assests/symp/s0.png")} alt="img6" />
             </div>
             <div className="Smenu">
 
