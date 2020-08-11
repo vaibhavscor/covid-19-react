@@ -5,6 +5,7 @@ import './case.css';
 export default function Cases() {
     const [cntr, setcntr] = useState([])
     const [totl, settotl] = useState([])
+    const [loading, setloading] = useState(false)
 
     useEffect(() => {
         async function getdata() {
@@ -12,6 +13,7 @@ export default function Cases() {
             console.log(res.data.Global);
             setcntr(res.data.Countries)
             settotl(res.data.Global)
+            setloading(true)
         }
 
         getdata();
@@ -22,72 +24,80 @@ export default function Cases() {
     return (
         <>
 
-            <div className="over_alldata container">
-                <div className="row">
-                    <div className="Tconf">
-                        <h2>Total Confirmed</h2>
-                        <h1>{totl.TotalConfirmed}</h1>
-                    </div>
-                    <div className="Tnconf">
-                        <h2>Total NewConfirmed</h2>
-                        <h1>{totl.NewConfirmed}</h1>
-                    </div>
-                    <div className="Trecov">
-                        <h2>Total Recovered</h2>
-                        <h1>{totl.TotalRecovered}</h1>
-                    </div>
-                    <div className="Tdeath">
-                        <h2>Total Deaths</h2>
-                        <h1>{totl.TotalDeaths}</h1>
+            {loading ? (<div>
+                <div className="over_alldata container">
+                    <div className="row">
+                        <div className="Tconf">
+                            <h2>Total Confirmed</h2>
+                            <h1>{totl.TotalConfirmed}</h1>
+                        </div>
+                        <div className="Tnconf">
+                            <h2>Total NewConfirmed</h2>
+                            <h1>{totl.NewConfirmed}</h1>
+                        </div>
+                        <div className="Trecov">
+                            <h2>Total Recovered</h2>
+                            <h1>{totl.TotalRecovered}</h1>
+                        </div>
+                        <div className="Tdeath">
+                            <h2>Total Deaths</h2>
+                            <h1>{totl.TotalDeaths}</h1>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
 
 
-            <div className="case_data">
+                <div className="case_data">
 
-                <table>
-                    <thead>
-                        <tr className="headert">
-                            <td>
-                                <h3>Country</h3>
-
-                            </td>
-                            <td>
-                                <h3>Total Cases</h3>
-                            </td>
-                            <td>
-                                <h3>Recovered</h3>
-                            </td>
-                            <td>
-                                <h3>Death</h3>
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {cntr.map((cntry) => (
-
-                            <tr>
+                    <table>
+                        <thead>
+                            <tr className="headert">
                                 <td>
-                                    {cntry.Country}
+                                    <h3>Country</h3>
+
                                 </td>
                                 <td>
-                                    {cntry.TotalConfirmed}
+                                    <h3>Total Cases</h3>
                                 </td>
                                 <td>
-                                    {cntry.TotalRecovered}
+                                    <h3>Recovered</h3>
                                 </td>
                                 <td>
-                                    {cntry.TotalDeaths}
+                                    <h3>Death</h3>
                                 </td>
                             </tr>
-                        ))}
-                    </tbody>
+                        </thead>
+                        <tbody>
+                            {cntr.map((cntry) => (
 
-                </table>
+                                <tr>
+                                    <td>
+                                        {cntry.Country}
+                                    </td>
+                                    <td>
+                                        {cntry.TotalConfirmed}
+                                    </td>
+                                    <td>
+                                        {cntry.TotalRecovered}
+                                    </td>
+                                    <td>
+                                        {cntry.TotalDeaths}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+
+                    </table>
+                </div>
+
             </div>
+            ) : (<div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            </div>)}
         </>
     )
 }
