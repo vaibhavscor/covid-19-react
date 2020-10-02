@@ -4,7 +4,7 @@ import Wcases from "./Wcases";
 
 
 const api = {
-    key: "a9bf793831bb9bb40c281a3c91eff909",
+    key: "#",
     base: "https://api.openweathermap.org/data/2.5/"
 }
 
